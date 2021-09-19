@@ -23,14 +23,14 @@
 - たくさんのクライアントに対して少数のサーバが対応している。
 - クライアントは、コンピューターネットワーク上で必要なサーバを探して、作業を依頼する。
 - サーバは、複数のクライアントの依頼を受け付けて処理を行う。
-![スクリーンショット 2021-09-18 1.19.48.png](https://tech-essentials-production.s3.ap-northeast-1.amazonaws.com/ac894620-7790-44f9-a9f9-139463c5b1f1.png)
+![クライアントサーバモデル](https://user-images.githubusercontent.com/73997764/133929548-940d7fbc-c53e-4257-abdf-7512d15d86f6.png)
 
 
 #### Webを表示する仕組み
 - Webページを表示したい時は、クライアントであるWebブラウザなどから、サーバにリクエストが送られる。（リクエストを送るときに、どのWebサーバのどのページを表示したいかは、URIで指定する。）
 - サーバからのレスポンスをクライアントが受け取ることで、Webページを表示することができる。（レスポンスと一緒に送られるWebページはHTMLフォーマットで記述される。）
 - リクエストを送ってレスポンスを受け取るという通信手順は、HTTPとして標準化されている。
-![スクリーンショット 2021-09-18 1.20.00.png](https://tech-essentials-production.s3.ap-northeast-1.amazonaws.com/a9ad8c74-f57e-4604-9cd3-1ad3ac086cce.png)
+![Webを表示する仕組み](https://user-images.githubusercontent.com/73997764/133929547-2500ae21-baef-45e9-aafd-759261157245.png)
 
 
 ### URI
@@ -171,7 +171,9 @@ HOST: example.jp
 - HTTPメッセージ（HTTPリクエストとHTTPレスポンス）の内容は、Chromeの開発者ツールのネットワークタブで確認することができる。
 - https://tech-essentials.work/dashboard のHTTPメッセージを実際に確認した結果が下記である。
 
-![スクリーンショット 2021-09-18 0.42.41.png](https://tech-essentials-production.s3.ap-northeast-1.amazonaws.com/fd8744a1-5318-4329-96c5-b0f0e03b43b5.png)![スクリーンショット 2021-09-18 0.42.49.png](https://tech-essentials-production.s3.ap-northeast-1.amazonaws.com/448ca8b8-28c0-4f13-bc45-286674191f95.png)
+![GET1](https://user-images.githubusercontent.com/73997764/133929545-68702eff-c128-46ec-b955-30ce809824a4.png)
+
+![GET2](https://user-images.githubusercontent.com/73997764/133929541-f3c6c26b-22d6-46d8-af7c-2ee063cbaf1d.png)
 
 - 1枚目の画像のHeadersタブの部分からは、下記のようなことを読み取ることができる。
   - リクエスト
@@ -192,12 +194,12 @@ HOST: example.jp
 
 Chromeの開発者ツールのネットワークタブで、profileファイルを開くと、Headersタブ内にGeneral, Response Headers, Request Headersの下にForm Data という項目があり、そこでフォームに入力した内容を確認することができる。
 
-![image](https://tech-essentials-production.s3.ap-northeast-1.amazonaws.com/415cba5b-a627-4f24-a269-39a02a41e41b.png)
+![POST1](https://user-images.githubusercontent.com/73997764/133929538-10919863-3749-44dd-9d82-481ae3b348df.png)
 
 
 また、この時のリクエストメソッドはPOSTで、ステータスコードは320 Foundとなっている（302 Foundは、リクエストされたリソースが一時的に Location で示された URL へ移動したことを示す。（参照 : https://developer.mozilla.org/ja/docs/Web/HTTP/Status/302 ））
 
-![image](https://tech-essentials-production.s3.ap-northeast-1.amazonaws.com/af7691a3-8fa9-4595-97b4-5c737335b455.png)
+![POST2](https://user-images.githubusercontent.com/73997764/133929534-ae7de0e1-b525-4c29-8065-d7791da12b41.png)
 
 ### 参考にした書籍やwebページ
 - [フォームデータの送信 - ウェブ開発を学ぶ | MDN](https://developer.mozilla.org/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
